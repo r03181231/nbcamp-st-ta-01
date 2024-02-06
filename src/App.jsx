@@ -33,7 +33,7 @@ function App() {
           value={number}
           onChange={onChangeValue}
         />{" "}
-        만큼을 <button onClick={() => onClickPlusNum(number)}>더할게요</button>{" "}
+        만큼을 <button onClick={() => onClickPlusNum(number)}>더할게요</button>
         <button onClick={() => onClickMinusNum(number)}>뺄게요</button>
       </div>
       <hr />
