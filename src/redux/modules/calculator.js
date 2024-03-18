@@ -16,9 +16,10 @@ export const onMinusNum = (payload) => {
   };
 };
 
-export const onTotalNum = () => {
+export const onTotalNum = (number) => {
   return {
     type: TOTAL_NUM,
+    payload: number,
   };
 }; // action creator
 
@@ -40,8 +41,7 @@ const calculator = (state = initialState, action) => {
       return { ...state, number: state.number - action.payload };
     case "TOTAL_NUM":
       return {
-        totalNumber:
-          state.number + action.payload + (state.number - action.payload),
+        totalNumber: state.number + action.payload,
       };
     default:
       return state;
